@@ -10,6 +10,8 @@
 #include <cstdarg>
 #include <cmath>
 
+
+//Zestaw 4
 //Zadanie 1
 double min(double tap[], int rozmiar){
     double min = DBL_MAX;
@@ -57,25 +59,22 @@ double obl_wiel(double x, int n, ...){
     return wynik;
 }
 
-//Zadanie 4
-//const int max_glebokosc = 10;
-//
-//void dywan(int x, int y, int sz, int glebokosc) {
-//    if(glebokosc > max_glebokosc) {
-//        rysuj_kwadrat(x, y, sz);
-//    } else {
-//        sz /= 3;
-//        dywan(x,        y,          sz, glebokosc + 1);
-//        dywan(x+sz,     y,          sz, glebokosc + 1);
-//        dywan(x+sz+sz,  y,          sz, glebokosc + 1);
-//        dywan(x,        y+sz,       sz, glebokosc + 1);
-//        //dywan(x,      y+sz,       sz, glebokosc + 1); // srodek ma byc pusty
-//        dywan(x+sz+sz,  y+sz,       sz, glebokosc + 1);
-//        dywan(x,        y+sz+sz,    sz, glebokosc + 1);
-//        dywan(x+sz,     y+sz+sz,    sz, glebokosc + 1);
-//        dywan(x+sz+sz,  y+sz+sz,    sz, glebokosc + 1);
-//    }
-//}
+//Zadanie 4  - niestety tylko iteracyjne
+void dywan(int n){
+    int i, j, dim, d;
+    int depth = n-1;
+    for (i = 0, dim = 1; i < depth; i++, dim *= 3) {
+        for (i = 0; i < dim; i++) {
+            for (j = 0; j < dim; j++) {
+                for (d = dim / 3; d; d /= 3)
+                    if ((i % (d * 3)) / d == 1 && (j % (d * 3)) / d == 1)
+                        break;
+                printf(d ? " " : "#");
+            }
+            printf("\n");
+        }
+    }
+}
 
 //Zadanie 5
 void polacz(int tab1[], int tab2[], int rozmiar1, int rozmiar2){
@@ -94,7 +93,9 @@ void polacz(int tab1[], int tab2[], int rozmiar1, int rozmiar2){
     }
 }
 
-//Zajecia 5
+
+
+//Zestaw 5
 //Zadanie 1
 int strpos(char str[], char z){
     for(int i = 0; i < (sizeof(str)/ sizeof(*str)); i++){
