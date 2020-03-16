@@ -18,4 +18,6 @@ extern int strfind(char gdzie[], char co[]);
 extern void strcut(char lan[], int od, int ile);
 extern bool strprefix(char str1[], char str2[]);
 extern int strcountfind(char gdzie[], char co[]);
+extern void szyfruj(const char tekst[], int przesuniecie, char wynik[]);
+extern void deszyfruj(char tekst[], int przesuniecie);
 #endif //ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_3_H

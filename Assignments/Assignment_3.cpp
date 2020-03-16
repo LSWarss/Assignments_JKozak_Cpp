@@ -184,5 +184,45 @@ int strcountfind(char gdzie[], char co[]){
     return counter/2;
 }
 
-//Zadanie 7
+//Zadanie8
+//TODO : Ogarnąć przesyłanie wyniku pomiedzy tymi dwoma metodami
+void szyfruj(const char tekst[], int przesuniecie){
+    for(int i = 0; i <  sizeof(tekst); i++){
+        if((int)tekst[i] != 32) {
+            wynik[i] = tekst[i] + przesuniecie;
+        }
+        else{
+            wynik[i] = tekst[i];
+        }
+    }
 
+
+    for(int j = 0; j < sizeof(wynik); j++){
+        std::cout << wynik[j];
+        if(j == sizeof(wynik)){
+            std::cout << std::endl;
+        }
+    }
+
+}
+
+void deszyfruj(const char tekst[], int przesuniecie){
+    char zaszyfrowany[sizeof(tekst)];
+    for(int i = 0; i <  sizeof(tekst); i++){
+        if((int)tekst[i] != 32) {
+            zaszyfrowany[i] = tekst[i] + przesuniecie;
+        }
+        else{
+            zaszyfrowany[i] = tekst[i];
+        }
+    }
+
+
+    for(int j = 0; j < sizeof(zaszyfrowany); j++){
+        std::cout << zaszyfrowany[j];
+        if(j == sizeof(zaszyfrowany)){
+            std::cout << std::endl;
+        }
+    }
+
+}

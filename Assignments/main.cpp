@@ -10,6 +10,6 @@
 
 int main()
 {
+    szyfruj("Ala ma kota", 1);
     return 0;
-
 }
