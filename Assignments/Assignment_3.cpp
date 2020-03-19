@@ -1,5 +1,5 @@
 //
-// Created by lswar on 11/03/2020.
+// Created by LSWarss on 11/03/2020.
 //
 
 #include "Assignment_3.h"
@@ -186,43 +186,43 @@ int strcountfind(char gdzie[], char co[]){
 
 //Zadanie8
 //TODO : Ogarnąć przesyłanie wyniku pomiedzy tymi dwoma metodami
-void szyfruj(const char tekst[], int przesuniecie){
-    for(int i = 0; i <  sizeof(tekst); i++){
-        if((int)tekst[i] != 32) {
-            wynik[i] = tekst[i] + przesuniecie;
-        }
-        else{
-            wynik[i] = tekst[i];
-        }
-    }
-
-
-    for(int j = 0; j < sizeof(wynik); j++){
-        std::cout << wynik[j];
-        if(j == sizeof(wynik)){
-            std::cout << std::endl;
-        }
-    }
-
-}
-
-void deszyfruj(const char tekst[], int przesuniecie){
-    char zaszyfrowany[sizeof(tekst)];
-    for(int i = 0; i <  sizeof(tekst); i++){
-        if((int)tekst[i] != 32) {
-            zaszyfrowany[i] = tekst[i] + przesuniecie;
-        }
-        else{
-            zaszyfrowany[i] = tekst[i];
-        }
-    }
-
-
-    for(int j = 0; j < sizeof(zaszyfrowany); j++){
-        std::cout << zaszyfrowany[j];
-        if(j == sizeof(zaszyfrowany)){
-            std::cout << std::endl;
-        }
-    }
-
-}
+//void szyfruj(const char tekst[], int przesuniecie){
+//    for(int i = 0; i <  sizeof(tekst); i++){
+//        if((int)tekst[i] != 32) {
+//            wynik[i] = tekst[i] + przesuniecie;
+//        }
+//        else{
+//            wynik[i] = tekst[i];
+//        }
+//    }
+//
+//
+//    for(int j = 0; j < sizeof(wynik); j++){
+//        std::cout << wynik[j];
+//        if(j == sizeof(wynik)){
+//            std::cout << std::endl;
+//        }
+//    }
+//
+//}
+//
+//void deszyfruj(const char tekst[], int przesuniecie){
+//    char zaszyfrowany[sizeof(tekst)];
+//    for(int i = 0; i <  sizeof(tekst); i++){
+//        if((int)tekst[i] != 32) {
+//            zaszyfrowany[i] = tekst[i] + przesuniecie;
+//        }
+//        else{
+//            zaszyfrowany[i] = tekst[i];
+//        }
+//    }
+//
+//
+//    for(int j = 0; j < sizeof(zaszyfrowany); j++){
+//        std::cout << zaszyfrowany[j];
+//        if(j == sizeof(zaszyfrowany)){
+//            std::cout << std::endl;
+//        }
+//    }
+//
+//}

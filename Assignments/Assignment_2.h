@@ -1,5 +1,5 @@
 //
-// Created by lswar on 11/03/2020.
+// Created by LSWarss on 11/03/2020.
 //
 
 #ifndef ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_2_H
