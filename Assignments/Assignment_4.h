@@ -5,4 +5,7 @@
 #ifndef ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_4_H
 #define ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_4_H
 
+
+extern int count(char fileName[], int &white_signs, int &words);
+
 #endif //ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_4_H
