@@ -20,8 +20,5 @@ int main()
     cout << biale_znaki << endl;
     cout << slowa << endl;
 
-
-
-
 return 0;
 }
