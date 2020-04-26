@@ -62,3 +62,28 @@ void ptradv(int* wsk, int n){
         wsk += 1;
     }
 }
+
+/*Napisz funkcję int * odwroc(int *tab, int rozmiar) , która tworzy kopię
+ * podanej tablicy, ale z elementami w odwrotnym porządku. Wynikiem funkcji jest
+ * adres utworzonej tablicy.*/
+int * odworc(int *tab, int rozmiar){
+
+    int *pointer = tab; //pointing at the beginning of the array
+
+    int *pointer1 = tab + rozmiar -1; //pointing at the end of the array
+
+    while(pointer < pointer1){
+        swap(pointer,pointer1);
+        pointer++;
+        pointer1--;
+    }
+
+    return tab;
+}
+
+void swap(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
