@@ -12,6 +12,12 @@ Unfortunately assigment cards are in Polish only.
 ## Third assignment: Procedures and functions
 [Assignment card 3](http://jkozak.pl/pliki/cpp/zestaw3.pdf)
 
+## Fourth assignment: Files
+[Assignment card 4](http://jkozak.pl/pliki/cpp/zestaw4.pdf)
+
+## Fifth assignment: Pointers
+[Assignment card 5](zestaw5.pdf)
+
 ## Repetition
 [Repetition card 1](http://jkozak.pl/pliki/jpoig/kol_2_p1.pdf)
 
