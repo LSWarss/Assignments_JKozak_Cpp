@@ -154,8 +154,8 @@ void choinka(int n){
 }
 // Zadanie 4
 /*Napisać program działający w trybie konsolowym (tekstowym) i rysujący na ekranie prostokąt. Użytkownik podaje znak wypełnienia prostokąta, pozycję lewego
-górnego rogu prostokąta (x, y) oraz długości boków prostokąta (ab). Przyjmujemy,
-że lewy górny narożnik konsoli ma współrzędne (x, y) = (1, 1).*/
+górnego rogu prostokąta (x_, y_) oraz długości boków prostokąta (ab). Przyjmujemy,
+że lewy górny narożnik konsoli ma współrzędne (x_, y_) = (1, 1).*/
 void prostokat(int x, int y, char wyp, int a, int b)
 {
     for(int i = 0; i < y+a; i++){

@@ -2,7 +2,12 @@
 // Created by lswar on 13/05/2020.
 //
 
+
 #ifndef ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_6_H
 #define ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_6_H
+
+#include <string>
+
+
 
 #endif //ASSIGNMENTS_JKOZAK_CPP_ASSIGNMENT_6_H
