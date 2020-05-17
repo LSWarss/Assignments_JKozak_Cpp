@@ -141,8 +141,90 @@ Czas::~Czas() {
     cout << "Destrukt";
 }
 
-//Zadanie 3
+//Zadanie 3  //TODO: Add this
 
+
+
+//Zadanie 4
+class ElementZamowienia{
+private:
+    string nazwa_;
+    double cena_;
+    int liczbaSztuk_;
+public:
+    ElementZamowienia();
+    ElementZamowienia(string nazwa, double cena, int liczbaSztuk);
+    string toString();
+    double obliczKoszt();
+    double obliczRabat();
+
+};
+
+ElementZamowienia::ElementZamowienia() {}
+
+ElementZamowienia::ElementZamowienia(string nazwa, double cena, int liczbaSztuk) {
+    nazwa_ = nazwa;
+    cena_ = cena;
+    liczbaSztuk_ = liczbaSztuk;
+}
+
+string ElementZamowienia::toString() {
+    return nazwa_ + " " + to_string(cena_) + " zł, " + to_string(liczbaSztuk_) + " szt., łącznie " + to_string(cena_*liczbaSztuk_) + " zł";
+}
+
+double ElementZamowienia::obliczRabat() {
+    if(liczbaSztuk_ >= 5) {
+        return 0.9 * cena_;
+    } else return cena_;
+}
+
+double ElementZamowienia::obliczKoszt() {
+    return liczbaSztuk_ * obliczRabat();
+}
+
+class Zamowienie{
+    private:
+        ElementZamowienia *elementy_;
+        int rozmiar_;
+        int maksRozmiar_;
+
+    public:
+        Zamowienie(int maksRozmiar);
+        ~Zamowienie();
+        bool dodaj(const ElementZamowienia &p);
+        double obliczKoszt();
+        void pisz();
+
+};
+
+Zamowienie::Zamowienie(int maksRozmiar) {
+    elementy_ = new ElementZamowienia();
+    maksRozmiar_ = maksRozmiar;
+    rozmiar_ = 0;
+}
+
+Zamowienie::~Zamowienie() {
+    delete elementy_;
+}
+
+double Zamowienie::obliczKoszt() {
+    return 0;  //TODO: Add this
+}
+
+void Zamowienie::pisz() {
+    //TODO: Add this
+}
+
+bool Zamowienie::dodaj(const ElementZamowienia &p) {
+    for(int i = 0; i < maksRozmiar_; i++){
+        if(i == rozmiar_){
+            rozmiar_++;
+            elementy_[i] = p;
+            break;
+        }
+    }
+    return true;
+}
 
 
 
