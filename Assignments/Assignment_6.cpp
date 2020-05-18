@@ -142,7 +142,78 @@ Czas::~Czas() {
 }
 
 //Zadanie 3  //TODO: Add this
+class Lista{
+    private:
+        int * liczby;
+        int pojemnosc;
+        int rozmiar;
+    public:
+    Lista(int pojemnosc);
+    ~Lista();
+    void dodajElement(int liczba);
+    int znajdz(int liczba);
+    void pisz();
+    void usunPierwszy();
+    void usunPowtorzenia();
+    void odwroc();
+    void zapiszDoPliku(string nazwaPliku);
 
+};
+
+Lista::Lista(int pojemnosc) {
+    liczby = new int;
+    pojemnosc = pojemnosc;
+    rozmiar = 0;
+}
+
+Lista::~Lista() {
+    delete liczby;
+}
+
+void Lista::dodajElement(int liczba) {
+    if(rozmiar == pojemnosc){
+        throw exception();
+    }
+    else{
+        for(int i = 0; i < pojemnosc; i++){
+            if(i == rozmiar){
+                liczby[i] = liczba;
+                rozmiar++;
+            }
+        }
+    }
+}
+
+int Lista::znajdz(int liczba) {
+    for(int i = 0; i < pojemnosc; i++){
+        if(liczby[i] == liczba){
+            return i;
+        }
+    }
+    return -1;
+}
+
+void Lista::pisz() {
+    cout << "Lista pojemność maksymalna: " << pojemnosc << " aktualny rozmiar: " << rozmiar << endl;
+}
+
+void Lista::usunPierwszy() {
+
+} //TODO: End this method
+
+void Lista::usunPowtorzenia() {
+
+}//TODO: End this method
+
+void Lista::odwroc() {
+    for(int i = 0; i < pojemnosc; i++){
+        liczby[i] = liczby[pojemnosc - i];
+    }
+}
+
+void Lista::zapiszDoPliku(string nazwaPliku) {
+
+}//TODO: End this method
 
 
 //Zadanie 4
@@ -208,11 +279,17 @@ Zamowienie::~Zamowienie() {
 }
 
 double Zamowienie::obliczKoszt() {
-    return 0;  //TODO: Add this
+    double suma = 0;
+    for(int i = 0; i < maksRozmiar_; i++){
+        suma+=elementy_[i].obliczKoszt();
+    }
+    return suma;
 }
 
 void Zamowienie::pisz() {
-    //TODO: Add this
+   for(int i = 0; i < maksRozmiar_; i++){
+       cout << i << ". " << elementy_[i].toString() << " łączny koszt: " << elementy_[i].obliczKoszt() << "z rabatem " << elementy_[i].obliczRabat() << endl;
+   }
 }
 
 bool Zamowienie::dodaj(const ElementZamowienia &p) {
