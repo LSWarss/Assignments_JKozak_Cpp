@@ -42,7 +42,7 @@ int main()
 //    z = t;
 //    ptradv(z, 4);
 
-    Czas("12 h 15 min");
+//    Czas("12 h 15 min");
 
     cin.get();
 }

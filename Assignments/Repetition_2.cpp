@@ -24,26 +24,26 @@ double przepisz(char* inputFile, int wiek){
         cout << "Nie ma dostępu do pliku";
     }
 
-    double średniWiekM = 0;
-    char płeć;
+    double sredniWiek = 0;
+    char plec;
     string imie, nazwisko;
     double pensja;
 
     int i = 0, wiekTymczasowy;
 
-    while (input >> imie >> nazwisko >> płeć >> wiekTymczasowy >> pensja){
-        if(płeć == 'M'){
+    while (input >> imie >> nazwisko >> plec >> wiekTymczasowy >> pensja){
+        if(plec == 'M'){
             wyjsciowyM << imie << nazwisko << wiekTymczasowy << pensja + pensja*((double)wiekTymczasowy/100) << endl;
-            średniWiekM += pensja;
+            sredniWiek += pensja;
         }
-        else if(płeć == 'K'){
+        else if(plec == 'K'){
             wiekTymczasowy > wiek ? (pensja += pensja * ((double) 5 / 100)) : (pensja == pensja * ((double)3/100));
             wyjsciowyK << imie << nazwisko << wiekTymczasowy << pensja << endl;
         }
         i++;
     }
 
-    return średniWiekM/i;
+    return sredniWiek / i;
 }
 
 int fif(char* pl, char* slowo, char* &wsk){
@@ -56,19 +56,19 @@ int fif(char* pl, char* slowo, char* &wsk){
     string wyrazTymczasowy;
 
 
-    int length = 0, rozwiązanie = -1, i = 0;
+    int length = 0, rozwiazanie = -1, i = 0;
 
     while(input >> wyrazTymczasowy){
         if(wyrazTymczasowy == slowo) {
-            rozwiązanie = 0;
+            rozwiazanie = 0;
         }
         if(wyrazTymczasowy.length() > length){
             length = wyrazTymczasowy.length();
             strcpy(pointer, wyrazTymczasowy.c_str());
-            rozwiązanie = i;
+            rozwiazanie = i;
         }
         i += wyrazTymczasowy.length() + 1;
     }
 
-    return rozwiązanie;
+    return rozwiazanie;
 }
